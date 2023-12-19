@@ -154,3 +154,7 @@ function addToCart(productName, price) {
             window.location.href = 'remove_from_cart.php?index=' + index;
         }
     }
+
+    document.getElementById('changePasswordBtn').addEventListener('click', function() {
+        document.getElementById('changePasswordForm').style.display = 'block';
+    });
