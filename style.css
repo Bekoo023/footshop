@@ -253,9 +253,9 @@ nav button:hover{
 }
 
 .slideshow-container {
-    max-width: 500px;
+    max-width: 100%;
     position: relative;
-    margin-top: 20px;
+    margin-top: 62px;
     margin-bottom: 20px;
 }
 
@@ -269,7 +269,6 @@ nav button:hover{
 
 .mySlides img{
     width: 100%;
-    border-radius: 20px;
 }
 
 .text {
@@ -297,13 +296,13 @@ nav button:hover{
 }
 
 .prev{
-    left: 530px;
+    left: 20px;
     border-radius: 3px 0 0 3px;
 
 }
 
 .next {
-    right: 530px;
+    right: 20px;
     border-radius: 3px 0 0 3px;
 }
 
@@ -488,4 +487,11 @@ main h2{
     margin-top: 100px;
     font-size: 28px;
     margin-left: 40px;
+}
+
+.achtergrond img{
+    position: absolute;
+    width: 100%;
+    max-height: 14cm;
+    opacity: 0.5;
 }

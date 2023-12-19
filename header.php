@@ -7,7 +7,6 @@ if (isset($_SESSION['username'])) {
     echo '<ul>';
     echo '<li><a href="home.php">Home</a></li>';
     echo '<li><a href="producten.php">Products</a></li>';
-    echo '<li><a href="slideshow.php">Slideshow</a></li>';
 
     if ($_SESSION['role'] === 'administrator') {
         echo '<li><a href="admin_dashboard.php">Dashboard</a></li>';
@@ -25,7 +24,6 @@ if (isset($_SESSION['username'])) {
     echo '<ul>';
     echo '<li><a href="home.php">Home</a></li>';
     echo '<li><a href="producten.php">Products</a></li>';
-    echo '<li><a href="slideshow.php">Slideshow</a></li>';
     echo '<li><a href="login.php">Login</a></li>';
     echo '<li><a href="register.php">Register</a></li>';
     echo '</ul>';

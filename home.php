@@ -12,18 +12,31 @@ require 'database.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Home</title>
+    <title>FootShop</title>
 </head>
 <body>
     <header>
-        <h1>Welcome to Delights</h1>
+        <h1>Welcome to FootShop</h1>
         <?php include 'header.php'?>
         <a href="shopping_bag.php" class="shopping_bag_button"><img src="fotos/bag.jpg" alt="Shopping Bag"></a>
     </header>
 
     <main>
-        <h2>Welcome to Our Website</h2>
+    <div class="slideshow-container">
+    <div class="mySlides fade">
+            <a href="producten.php"><img src="fotos/fotoslide.jpg" style="width:100%" onclick="showInfo('Coffee Image 1')"></a>
+        </div>
+
+        <div class="mySlides fade">
+        <a href="producten.php"><img src="fotos/fotoslide2.jpg" style="width:100%" onclick="showInfo('Coffee Image 1')"></a>
+        </div>
+
+        <div class="mySlides fade">
+        <a href="producten.php"><img src="fotos/fotoslide3.jpg" style="width:100%" onclick="showInfo('Coffee Image 1')"></a>
+        </div>
+    </div>
     </main>
+
     <div class="texttopproducten">
         <p><strong>Top producten: </strong></p>
     </div>
