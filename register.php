@@ -2,30 +2,23 @@
 
 require 'database.php';
 
-// Check if the form is submitted
+// Check of de form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve registration data from the form
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $address = $_POST["address"];
-    $postal_code = $_POST["postal_code"];
     $email = $_POST["email"];
     $defaultRole = 'customer';
 
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // TODO: Implement database query to insert user data
-    $result = mysqli_query($conn, "INSERT INTO users (firstname, lastname, username, hashed_password, address, postal_code, email, role) VALUES ('$firstname', '$lastname', '$username', '$hashed_password', '$address', '$postal_code', '$email', '$defaultRole')");
+    $result = mysqli_query($conn, "INSERT INTO users (firstname, lastname, username, hashed_password, email, role) VALUES ('$firstname', '$lastname', '$username', '$hashed_password', '$email', '$defaultRole')");
 
-    //Example validation
      if ($result) {
-         // Registration successful
          echo "Registration successful!";
      } else {
-         // Registration failed
          echo "Registration failed. Please try again.";
      }
 
@@ -45,10 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1>Register</h1>
         <nav>
             <ul>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="register.php">Register</a></li>
-                <!-- Add other navigation links as needed -->
+                <?php include 'header.php';  ?>
             </ul>
         </nav>
     </header>
@@ -69,17 +59,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
 
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required>
-
-        <label for="postal_code">Postal Code:</label>
-        <input type="text" id="postal_code" name="postal_code" required>
-
         <button type="submit" class="submit-button">Register</button>
     </form>
 
-    <footer>
-        <p>&copy; 2023 Coffee Delights</p>
-    </footer>
+    <?php include 'footer.php'; ?>
+
 </body>
 </html>
