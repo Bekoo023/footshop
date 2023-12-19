@@ -16,12 +16,6 @@ require 'database.php';
 </head>
 <body>
     <header>
-        <div class="headerlinks">
-            <form action="search.php" method="get" class="search-form">
-                <input type="text" name="query" placeholder="Search...">
-                <button type="submit">Search</button>
-            </form>
-        </div>
         <h1>Welcome to Delights</h1>
         <?php include 'header.php'?>
         <a href="shopping_bag.php" class="shopping_bag_button"><img src="fotos/bag.jpg" alt="Shopping Bag"></a>
@@ -30,6 +24,9 @@ require 'database.php';
     <main>
         <h2>Welcome to Our Website</h2>
     </main>
+    <div class="texttopproducten">
+        <p><strong>Top producten: </strong></p>
+    </div>
 
     <div class="product-list" id="productList">
         <?php

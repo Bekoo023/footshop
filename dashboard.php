@@ -23,7 +23,6 @@ if (!isset($_SESSION['username'])) {
         <?php include 'header.php'; ?>
     </header>
 
-    <main>
         
     <div class="container_bag">
         <?php
@@ -49,8 +48,6 @@ if (!isset($_SESSION['username'])) {
         mysqli_close($conn);
         ?>
     </div>
-
-    </main>
 
     <?php include 'footer.php'; ?>
 

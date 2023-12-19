@@ -28,12 +28,6 @@ if ($_SESSION['role'] !== 'employee') {
 
     <main>
 
-        <div class="logout-container">
-            <form action="logout.php" method="post" class="logout-form">
-                <button type="submit" class="logout-button">Logout</button>
-            </form>
-        </div>
-
     </main>
     <?php include 'footer.php'; ?>
 
