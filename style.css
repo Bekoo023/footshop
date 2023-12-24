@@ -492,3 +492,7 @@ main h2{
     font-size: 28px;
     margin-left: 40px;
 }
+
+.knopinform input:hover{
+    background-color: #2c3e50;
+}
