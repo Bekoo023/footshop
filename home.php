@@ -8,11 +8,11 @@ require 'database.php';
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="fotos/achtergrond.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="x-icon" href="fotos/achtergrond.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
     <title>FootShop</title>
 </head>
 <body>
@@ -20,6 +20,19 @@ require 'database.php';
         <h1>Welcome to FootShop</h1>
         <?php include 'header.php'?>
         <a href="shopping_bag.php" class="shopping_bag_button"><img src="fotos/bag.jpg" alt="Shopping Bag"></a>
+        <div id="newsletter-popup" class="popup">
+            <div class="popup-content">
+                <span id="close-popup" class="close-popup">&times;</span>
+                <h2>Schrijf je in voor onze nieuwsbrief</h2>
+                <p>Blijf op de hoogte van ons laatste nieuws en updates.</p>
+                <form action="subscribe.php" method="post">
+                    <label for="email">E-mailadres:</label>
+                    <input type="email" name="email" id="email" required>
+                    <input type="submit" value="Inschrijven">
+                </form>
+            </div>
+        </div>
+        <div id="overlay" class="overlay"></div>
     </header>
 
     <main>
@@ -46,7 +59,7 @@ require 'database.php';
         <?php
         $query = "SELECT * FROM products";
         $result = mysqli_query($conn, $query);
-
+        
         if ($result && mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 echo '<div class="product">';
@@ -60,7 +73,7 @@ require 'database.php';
         } else {
             echo '<p>No products available.</p>';
         }
-
+        
         mysqli_close($conn);
         ?>
 
@@ -68,6 +81,6 @@ require 'database.php';
 
     <?php include 'footer.php'; ?>
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+console.log("JavaScript is running!");
 let slideIndex = 1;
 
 function showSlides(n) {
@@ -158,3 +159,18 @@ function addToCart(productName, price) {
     document.getElementById('changePasswordBtn').addEventListener('click', function() {
         document.getElementById('changePasswordForm').style.display = 'block';
     });
+
+// JavaScript to display the pop-up after a delay (e.g., 5 seconds)
+window.onload = function() {
+    setTimeout(function() {
+        document.getElementById('newsletter-popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }, 5000); // 5000 milliseconds (5 seconds)
+};
+
+// JavaScript to close the pop-up when the close button is clicked
+document.getElementById('close-popup').addEventListener('click', function() {
+    document.getElementById('newsletter-popup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+});
+
