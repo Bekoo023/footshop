@@ -79,8 +79,22 @@ require 'database.php';
 
     </div>
 
+    <!-- 
+        Reviews
+    <form action="submit_review.php" method="post">
+        <input type="text" name="title" placeholder="Titel van de review" required><br>
+        <input type="number" name="rating" placeholder="Beoordeling (1-5)" required min="1" max="5"><br>
+        <input type="date" name="purchase_date" required><br>
+        <input type="text" name="product_service_name" placeholder="Product/Dienst" required><br>
+        <textarea name="review_text" placeholder="Jouw review" required></textarea><br>
+        <input type="text" name="recommendation" placeholder="Aanbeveling (Ja/Nee)" required><br>
+        <textarea name="usage_tips" placeholder="Tips voor gebruik"></textarea><br>
+        <input type="submit" value="Review indienen">
+    </form> -->
+
+
     <?php include 'footer.php'; ?>
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
